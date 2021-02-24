@@ -1,0 +1,123 @@
+.site-logo {
+  // padding: 2rem;
+  // background-color: burlywood;
+  // border: 1px solid $link-active-clr;
+  width: 30vw;
+  max-width: 350px;
+  height: 100vw;
+  max-height: 1150px;
+  position: relative;
+  z-index: -10;
+  // overflow: hidden;
+  // height: 60px;
+  cursor: pointer;
+  span.logo {
+    display: block;
+    height: 4px;
+    position: absolute;
+    z-index: -5;
+  }
+  .left {
+    color: red;
+    width: 18%;
+
+    background-color: red;
+
+    -webkit-animation: fadeInLeft 0.3s linear;
+    animation: fadeInLeft 0.3s linear;
+  }
+  .right {
+    background-color: deeppink;
+    width: 40%;
+    right: 22%;
+    top: -3%;
+    -webkit-animation: fadeInRight 0.3s linear;
+    animation: fadeInRight 0.3s linear;
+  }
+  .bottom {
+    // background-color: blue;
+    // width: 60px;
+    // height: 40px !important;
+
+    // transform: rotate(308deg) translateY(60px);
+    // border-left: 6px solid black;
+    // border-bottom: 6px solid black;\
+    transform: rotate(347deg);
+    width: 30%;
+    left: 24%;
+    top: 4%;
+    -webkit-animation: fadeInTop 0.3s linear;
+    animation: fadeInTop 0.3s linear;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 6px;
+      background-color: black;
+      border-radius: 6px;
+      left: 0;
+      transform-origin: left 0;
+      z-index: -1;
+    }
+    &::after {
+      width: 60%;
+      transform: rotate(260deg);
+    }
+    &::before {
+      width: 100%;
+      transform: rotate(310deg);
+    }
+  }
+}
+
+// WITHOUT POLYFILL
+@-webkit-keyframes fadeInLeft {
+  0% {
+    visibility: hidden;
+    left: -5vw;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    visibility: hidden;
+    left: -5vw;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+  }
+}
+// WITHOUT POLYFILL
+@-webkit-keyframes fadeInRight {
+}
+@keyframes fadeInRight {
+  0% {
+    visibility: hidden;
+    right: -15vw;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    right: 0;
+    opacity: 1;
+  }
+}
+// WITHOUT POLYFILL {
+@-webkit-keyframes fadeInTop {
+}
+@keyframes fadeInTop {
+  0% {
+    top: 150px;
+  }
+  100% {
+    top: 30px;
+  }
+}
