@@ -21,16 +21,16 @@ type DataProps = {
 // console.log(typeof pizza);
 
 // INTERFACE : 
-interface SquareConfig {
-  color?: string;
-  width?: number;
-}
-function setStudent(config: SquareConfig): { color: string; age: number } {
-  this.studentName = config.color;
-  console.log(this.studentName)
-  return this.studentName
-}
-setStudent({ color: "8" })
+// interface SquareConfig {
+//   color?: string;
+//   width?: number;
+// }
+// function setStudent(config: SquareConfig): { color: string; age: number } {
+//   this.studentName = config.color;
+//   console.log(this.studentName)
+//   return this.studentName
+// }
+// setStudent({ color: "8" })
 // function createSquare(config: SquareConfig): { color: string; area: number } {
 //   let newSquare = { color: "white", area: 100 };
 //   if (config.color) {
@@ -40,13 +40,25 @@ setStudent({ color: "8" })
 //     newSquare.area = config.width * config.width;
 //   }
 //   console.log(newSquare.area)
-//   return newSquare;
+//   return newSquare;t 
 // }
 
 // let mySquare = createSquare({ color: "black" });
 // console.log(mySquare)
+interface SquareConfig {
+  color?: string;
+  width?: number;
+}
 
+function createSquare(config: SquareConfig): { color: string; area: number } {
+  return {
+    color: config.color || "red",
+    area: config.width ? config.width * config.width : 20,
+  };
+}
 
+let mySquare = createSquare({ color: "blue", width: 100 });
+console.log(mySquare)
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
 
 
