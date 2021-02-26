@@ -7,10 +7,7 @@ const BlogPost = ({ location, pageContext, data }) => {
   const { nextPostSlug, previousPostSlug } = pageContext
   console.log(data)
   return (
-    <div className="wrap-post">
-      <h1>
-        <Link to="/">←Home</Link> Hi! I'am StevPhan
-      </h1>
+    <Layout className="wrap-post">
       <section
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         itemProp="articleBody"
@@ -21,7 +18,7 @@ const BlogPost = ({ location, pageContext, data }) => {
         </Link>
       )}
       {previousPostSlug && <Link to={previousPostSlug}>Previous post </Link>}
-    </div>
+    </Layout>
   )
 }
 

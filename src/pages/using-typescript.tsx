@@ -45,22 +45,45 @@ type DataProps = {
 
 // let mySquare = createSquare({ color: "black" });
 // console.log(mySquare)
-interface SquareConfig {
-  color?: string;
-  width?: number;
-}
+// interface SquareConfig {
+//   color?: string;
+//   width?: number;
+// }
 
-function createSquare(config: SquareConfig): { color: string; area: number } {
-  return {
-    color: config.color || "red",
-    area: config.width ? config.width * config.width : 20,
-  };
-}
+// function createSquare(config: SquareConfig): { color: string; area: number } {
+//   return {
+//     color: config.color || "red",
+//     area: config.width ? config.width * config.width : 20,
+//   };
+// }
 
-let mySquare = createSquare({ color: "blue", width: 100 });
-console.log(mySquare)
+// let mySquare = createSquare({ color: "blue", width: 100 });
+// let a: number[] = [1, 2, 3, 4, 5]
+
+// let arr: ReadonlyArray<string> = ['he', 'hehehe', 'aaa']
+
+// console.log(arr)
+
+
+
 const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
 
+  class hello {
+    user: string;
+    details: string;
+    amount: number;
+    constructor(a: string, b: string, c: number) {
+      this.user = a;
+      this.details = b;
+      this.amount = c;
+    }
+  }
+
+
+
+  const hello1 = new hello('hello', 'pay for website', 230)
+
+  console.log(hello1)
 
   return (
     <Layout>

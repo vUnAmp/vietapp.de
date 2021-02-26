@@ -10,16 +10,22 @@ import slugify from "../../utils/slugify"
 import Logo from "../components/logo"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const blogPosts = data.allMarkdownRemark.nodes || []
-  const handleClick = () => {
-    window.print()
-  }
+  console.log(blogPosts)
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Logo />
-      <Link to="using-typescript">To TypesSript </Link>
+      {/* <Logo /> */}
+      {blogPosts.map((blog, i) => (
+        <Link
+          className="link-blog"
+          key={i}
+          to={slugify(blog.frontmatter.title)}
+        >
+          {blog.frontmatter.title}{" "}
+        </Link>
+      ))}
     </Layout>
   )
 }
@@ -28,7 +34,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
         id
         frontmatter {

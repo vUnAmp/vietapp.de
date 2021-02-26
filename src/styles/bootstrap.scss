@@ -74,10 +74,9 @@ $border-radius: 0.4rem;
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 body {
-  font-family: "Bad Script", cursive;
+  font-family: "Nunito", cursive;
   font-weight: 400;
   font-style: italic;
 }

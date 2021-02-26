@@ -5,16 +5,8 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header>
     <div>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `#c30`,
-            textDecoration: `none`,
-          }}
-        >
-          {/* {siteTitle} */}
-        </Link>
+      <h1>
+        <Link to="/">←Home</Link> Hi! I'am StevPhan
       </h1>
     </div>
   </header>
