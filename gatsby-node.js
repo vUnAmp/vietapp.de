@@ -9,7 +9,7 @@ const slugify = require("./utils/slugify")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  console.log(actions)
+
   const blogPost = require.resolve("./src/templates/blog-post.js")
 
   const result = await graphql(`

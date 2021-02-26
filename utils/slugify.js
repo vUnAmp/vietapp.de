@@ -1,5 +1,4 @@
 const slugify = (str = "", separator) => {
-  console.log(str)
   str = str
     .toLowerCase()
     .replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a")

@@ -11,8 +11,6 @@ import Logo from "../components/logo"
 
 const IndexPage = ({ data }) => {
   const blogPosts = data.allMarkdownRemark.nodes || []
-  console.log(blogPosts)
-
   return (
     <Layout>
       <SEO title="Home" />
